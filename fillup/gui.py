@@ -43,7 +43,7 @@ class Gui:
         button.pack()
 
         # button to insert data into browser
-        insert_button = tk.Button(self.root, text= "Insert data", command=self.browser.insert_data)
+        insert_button = tk.Button(self.root, text= "Insert data", command= lambda: self.browser.insert_data(text_box.get("1.0", tk.END).splitlines()))
         insert_button.pack()
 
         # button to close browser
